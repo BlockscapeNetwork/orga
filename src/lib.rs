@@ -1,12 +1,13 @@
 #![feature(trait_alias)]
 #![feature(fn_traits)]
 #![feature(proc_macro_hygiene)]
-#![feature(optin_builtin_traits)]
+// #![feature(optin_builtin_traits)]
+#![feature(auto_traits)]
 #![feature(map_first_last)]
 #![feature(generic_associated_types)]
 
 /// Integration with ABCI (gated by `abci` feature).
-#[cfg(feature = "abci")]
+// #[cfg(feature = "abci")]
 pub mod abci;
 
 /// Data structures which implement the [`state::State`](state/trait.State.html)
@@ -14,7 +15,7 @@ pub mod abci;
 pub mod collections;
 
 /// Integration with [merk](https://docs.rs/merk) (gated by `merk` feature).
-#[cfg(feature = "merk")]
+// #[cfg(feature = "merk")]
 pub mod merk;
 
 /// Traits for deterministic encoding and decoding.
