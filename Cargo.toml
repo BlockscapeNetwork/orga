@@ -8,7 +8,8 @@ license = "MIT"
 
 [dependencies]
 failure = "0.1.8"
-abci2 = { git = "https://github.com/nomic-io/abci2", rev = "f134b52f4d4a5b1704f0d1813cb901252cc3ed02", version = "0.1.2", optional = true }
+abci2 = "0.1.2"
+# abci2 = { git = "https://github.com/nomic-io/abci2", rev = "f134b52f4d4a5b1704f0d1813cb901252cc3ed02", version = "0.1.2", optional = true }
 merk = { git = " https://github.com/nomic-io/merk", rev = "104535c681610bb1a7d687de45ea1040aab590fd", version = "1.0.0", optional = true }
 tendermint-rpc = { version = "0.18.1", features = ["http-client"], optional = true }
 tendermint = { version = "0.18.1", optional = true }
@@ -31,4 +32,3 @@ required-features = ["abci"]
 [[example]]
 name = "merk_counter"
 required-features = ["abci", "merk"]
-
