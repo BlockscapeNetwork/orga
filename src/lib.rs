@@ -1,7 +1,7 @@
 #![feature(trait_alias)]
 #![feature(fn_traits)]
 #![feature(proc_macro_hygiene)]
-#![feature(optin_builtin_traits)]
+// #![feature(optin_builtin_traits)]
 
 #[cfg(feature = "abci")]
 pub mod abci;

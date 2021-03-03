@@ -1,4 +1,5 @@
-use crate::{Decode, Encode, Store, WrapStore};
+use crate::{Store, WrapStore};
+use ed::{Decode, Encode};
 use failure::Fail;
 use std::borrow::Borrow;
 use std::marker::PhantomData;

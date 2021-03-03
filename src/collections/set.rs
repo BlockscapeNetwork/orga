@@ -1,5 +1,6 @@
 use std::borrow::Borrow;
-use crate::{WrapStore, Store, Encode, Decode, Result};
+use crate::{WrapStore, Store};
+use ed::{Encode, Decode, Result};
 use super::Map;
 
 pub struct Set<S: Store, T: Encode + Decode> {

@@ -1,7 +1,7 @@
 use std::rc::Rc;
 use std::cell::RefCell;
 use super::{Store, Read, Write};
-use crate::Result;
+use ed::Result;
 
 // TODO: can we do this without copying every time we prefix the key? can
 // possibly change Store methods to generically support iterator-based

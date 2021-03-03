@@ -1,4 +1,5 @@
-use crate::{Result, Store};
+use crate::{Store};
+use ed:: Result;
 
 mod value;
 mod wrapper;

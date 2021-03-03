@@ -1,6 +1,7 @@
 use std::borrow::Borrow;
 use std::marker::PhantomData;
-use crate::{WrapStore, Store, Encode, Decode, Result};
+use crate::{WrapStore, Store};
+use ed::{Encode, Decode, Result};
 
 pub struct Map<S, K, V>
     where

@@ -1,4 +1,5 @@
-use orga::{MapStore, WrapStore, Value, state, Read};
+use orga::{MapStore, WrapStore, Value, Read};
+use orga_macros::state;
 
 #[state]
 struct MyStruct {

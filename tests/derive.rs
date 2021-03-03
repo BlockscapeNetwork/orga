@@ -1,4 +1,4 @@
-use orga::{Encode, Decode};
+use ed::{Encode, Decode};
 
 #[derive(Encode, Decode, PartialEq, Debug)]
 struct Foo {

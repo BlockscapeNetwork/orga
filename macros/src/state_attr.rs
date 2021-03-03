@@ -22,7 +22,7 @@ pub fn state(
         #item
 
         impl<S: orga::Store> orga::WrapStore<S> for #name<S> {
-            fn wrap_store(store: S) -> orga::Result<Self> {
+            fn wrap_store(store: S) -> ed::Result<Self> {
                 let mut splitter = orga::Splitter::new(store);
                 Ok(Self {
                     #(
