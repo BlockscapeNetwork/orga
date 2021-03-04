@@ -1,4 +1,5 @@
-use crate::{step_atomic, Flush, MapStore, Read, Result, Store, Write, WriteCache, WriteCacheMap};
+use crate::{step_atomic, Flush, MapStore, Read, Store, Write, WriteCache, WriteCacheMap};
+use ed::Result;
 use failure::bail;
 use std::clone::Clone;
 use std::env;
