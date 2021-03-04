@@ -1,4 +1,5 @@
-use crate::{Read, Result};
+use crate::{Read};
+use ed::Result;
 
 pub struct Client<R: Read> {
     read: R
