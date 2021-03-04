@@ -11,10 +11,10 @@ pub struct TendermintClient {
 impl TendermintClient {
     pub fn new(addr: &str) -> Result<TendermintClient> {
         Ok(TendermintClient {
-            client: Client::new(
+            client: HttpClient::new(
                 addr.parse()
                     .map_err(|_| format_err!("Invalid Tendermint RPC address"))?,
-            ),
+            )?,
         })
     }
 }
