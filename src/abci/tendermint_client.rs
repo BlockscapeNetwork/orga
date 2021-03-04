@@ -1,7 +1,7 @@
 use crate::{Read, Result};
 use blocking::block_on;
 use failure::format_err;
-use tendermint_rpc::Client;
+use tendermint_rpc::HttpClient;
 
 pub struct TendermintClient {
     client: HttpClient,
