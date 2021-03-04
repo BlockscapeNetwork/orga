@@ -14,7 +14,7 @@ impl TendermintClient {
             client: Client::new(
                 addr.parse()
                     .map_err(|_| format_err!("Invalid Tendermint RPC address"))?,
-            ),
+            )?,
         })
     }
 }
