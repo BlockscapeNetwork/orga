@@ -4,13 +4,13 @@ use failure::format_err;
 use tendermint_rpc::Client;
 
 pub struct TendermintClient {
-    client: Client,
+    client: HttpClient,
 }
 
 impl TendermintClient {
     pub fn new(addr: &str) -> Result<TendermintClient> {
         Ok(TendermintClient {
-            client: Client::new(
+            client: HttpClient::new(
                 addr.parse()
                     .map_err(|_| format_err!("Invalid Tendermint RPC address"))?,
             ),
