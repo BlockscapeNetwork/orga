@@ -2,14 +2,14 @@ use quote::quote;
 use syn::*;
 
 mod encoding;
-mod state_attr;
+mod state_attr_macro;
 
 #[proc_macro_attribute]
 pub fn state(
     attr: proc_macro::TokenStream,
     item: proc_macro::TokenStream
 ) -> proc_macro::TokenStream {
-    state_attr::state(attr, item)
+    state_attr_macro::state(attr, item)
 }
 
 #[proc_macro_derive(Encode)]
