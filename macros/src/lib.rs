@@ -3,6 +3,7 @@ use syn::*;
 
 mod encoding;
 mod state_attr_macro;
+use orga::state;
 
 #[proc_macro_attribute]
 pub fn state_attr(
