@@ -1,13 +1,13 @@
 use orga::{MapStore, WrapStore, Value, Read};
-use orga_macros::state;
+use orga_macros::state_attr;
 
-#[state]
+#[state_attr]
 struct MyStruct {
     a: Value<u64>,
     c: MyStruct2
 }
 
-#[state]
+#[state_attr]
 struct MyStruct2 {
     a: Value<u64>
 }

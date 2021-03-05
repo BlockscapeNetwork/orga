@@ -5,7 +5,7 @@ mod encoding;
 mod state_attr_macro;
 
 #[proc_macro_attribute]
-pub fn state(
+pub fn state_attr(
     attr: proc_macro::TokenStream,
     item: proc_macro::TokenStream
 ) -> proc_macro::TokenStream {
@@ -27,7 +27,7 @@ fn struct_fields<'a>(
 ) -> impl Iterator<Item=&'a Field> {
     let data = match item.data {
         Data::Struct(ref data) => data,
-        _ => panic!("The #[state] attribute can only be used on structs")
+        _ => panic!("The #[state_attr] attribute can only be used on structs")
     };
     match data.fields {
         Fields::Named(ref fields) => fields.named.iter(),
@@ -41,7 +41,7 @@ fn struct_fields_mut<'a>(
 ) -> impl Iterator<Item=&'a mut Field> {
     let data = match item.data {
         Data::Struct(ref mut data) => data,
-        _ => panic!("The #[state] attribute can only be used on structs")
+        _ => panic!("The #[state_attr] attribute can only be used on structs")
     };
     match data.fields {
         Fields::Named(ref mut fields) => fields.named.iter_mut(),
