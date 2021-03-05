@@ -2,16 +2,16 @@ use crate::{Read};
 use ed::{Result};
 use blocking::block_on;
 use failure::format_err;
-use tendermint_rpc::{HttpClient, Client};
+use tendermint_rpc::Client;
 
 pub struct TendermintClient {
-    client: HttpClient,
+    client: Client,
 }
 
 impl TendermintClient {
     pub fn new(addr: &str) -> Result<TendermintClient> {
         Ok(TendermintClient {
-            client: HttpClient::new(
+            client: Client::new(
                 addr.parse()
                     .map_err(|_| format_err!("Invalid Tendermint RPC address"))?,
             )?,
