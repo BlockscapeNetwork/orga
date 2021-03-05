@@ -3,14 +3,14 @@ use syn::*;
 
 mod encoding;
 mod state_attr_macro;
-use orga::state;
+
 
 #[proc_macro_attribute]
 pub fn state_attr(
     attr: proc_macro::TokenStream,
     item: proc_macro::TokenStream
 ) -> proc_macro::TokenStream {
-    state_attr_macro::state(attr, item)
+    state_attr_macro::state_attr(attr, item)
 }
 
 #[proc_macro_derive(Encode)]
